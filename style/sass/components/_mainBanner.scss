@@ -1,0 +1,77 @@
+.mainBanner {
+  height: 100vh;
+}
+.mainBanner-parent {
+  height: 100%;
+  position: relative;
+  transition: all linear 0.5s;
+  z-index: 1;
+  transition: background-size 30s ease; 
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background:linear-gradient(180deg, rgba(34, 19, 85, 0.7) 0, rgba(0, 0, 0, 0) 100%);
+    z-index: 1;
+  }
+  .mainbanner-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+    transition: transform linear 30s;
+  }
+}
+
+// scroll animated
+
+.scroll-btn {
+  position: absolute;
+  display: flex;
+  z-index: 4;
+  align-items: center;
+  justify-content: center;
+  bottom: 30px;
+  text-align: center;
+  left: 50%;
+  transform: translateX(-50%);
+  span {
+    width: 24px;
+    height: 45px;
+    border-radius: 12px;
+    border: 2px solid #ffffff;
+    position: relative;
+    display: inline-block;
+    transition: all ease 0.3s;
+  }
+}
+
+.scroll-btn span::after {
+  content: "";
+  width: 2px;
+  height: 10px;
+  background-color: #ffffff;
+  top: 6px;
+  opacity: 0;
+  left: 48%;
+  z-index: 3;
+  position: absolute;
+  transform: translateX(-48%);
+  animation-name: scroll;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+@keyframes scroll {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(20px);
+  }
+}
+
+
