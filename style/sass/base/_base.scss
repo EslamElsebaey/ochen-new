@@ -254,7 +254,7 @@ button {
 @include max-768 {
   .general-title {
     font-size: 20px;
-    line-height: normal;
+    line-height: 1.7;
     margin-bottom: 35px;
     &::after {
       bottom: -10px;
