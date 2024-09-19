@@ -1049,7 +1049,7 @@ html:not([dir=rtl]) .statistics .item .text {
   position: absolute;
   width: 40px;
   bottom: 15px;
-  inset-inline-end: 15px;
+  left: 15px;
   z-index: 1;
 }
 .service-item .item-img-holder:hover .service-img {
