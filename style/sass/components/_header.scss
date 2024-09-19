@@ -46,7 +46,7 @@ html:not([dir="rtl"]) {
   &.english {
     flex-direction: row-reverse;
   }
-  &.arabic{
+  &.arabic {
     flex-direction: row;
   }
 }
@@ -126,6 +126,7 @@ html:not([dir="rtl"]) {
     background-color: rgba($color: #221355, $alpha: 0.9);
     display: flex;
     align-items: flex-start;
+    transition: all linear 0.1s;
     gap: 20px;
     &::after {
       content: "\f00d";
@@ -181,10 +182,29 @@ html:not([dir="rtl"]) {
     }
   }
 }
+
 .reset-en-navigation {
   width: 100%;
   display: flex;
   justify-content: flex-end;
+}
+.reset-ar-navigation {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+}
+
+html:not([dir="rtl"]) {
+  .reset-en-navigation {
+    justify-content: flex-start;
+  }
+  .reset-ar-navigation {
+    justify-content: flex-end;
+  }
+}
+
+.reset-ar-navigation {
+  width: 100%;
 }
 .low-zIndex {
   z-index: 5;
@@ -266,13 +286,13 @@ html:not([dir="rtl"]) {
   .navigation {
     display: flex;
   }
-  .arabic{
+  .arabic {
     display: none;
   }
-  .ar-navigation{
+  .ar-navigation {
     display: flex;
   }
-    .en-navigation{
+  .en-navigation {
     display: none;
   }
 
@@ -280,8 +300,8 @@ html:not([dir="rtl"]) {
     .arabic {
       display: flex;
     }
-    .index-header{
-      .arabic{
+    .index-header {
+      .arabic {
         display: flex;
       }
     }
@@ -289,7 +309,7 @@ html:not([dir="rtl"]) {
       display: none;
     }
     .index-header {
-      .english{
+      .english {
         display: flex;
       }
     }
@@ -475,10 +495,10 @@ html:not([dir="rtl"]) {
     left: 50%;
     transform: translate(-50%, -50%);
   }
-  html:not([dir=rtl]) .header-content{
+  html:not([dir="rtl"]) .header-content {
     flex-direction: row;
   }
-   html:not([dir=rtl]) .index-header .header-content{
+  html:not([dir="rtl"]) .index-header .header-content {
     flex-direction: row-reverse;
   }
 }

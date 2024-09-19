@@ -437,6 +437,7 @@ html:not([dir=rtl]) .arabic {
   background-color: rgba(34, 19, 85, 0.9);
   display: flex;
   align-items: flex-start;
+  transition: all linear 0.1s;
   gap: 20px;
 }
 .menu-item-has-children .sub-menu::after {
@@ -485,6 +486,23 @@ html:not([dir=rtl]) .arabic {
   width: 100%;
   display: flex;
   justify-content: flex-end;
+}
+
+.reset-ar-navigation {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+}
+
+html:not([dir=rtl]) .reset-en-navigation {
+  justify-content: flex-start;
+}
+html:not([dir=rtl]) .reset-ar-navigation {
+  justify-content: flex-end;
+}
+
+.reset-ar-navigation {
+  width: 100%;
 }
 
 .low-zIndex {

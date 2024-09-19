@@ -46,7 +46,8 @@ $(document).ready(function () {
       $(".totop-whatsapp-holder").hide();
       $("body").addClass("overflow-hidden");
       $(this).parent().parent().addClass("show-submenu");
-      $(".en-navigation").addClass("reset-en-navigation");
+          $(".ar-navigation").addClass("reset-ar-navigation");
+          $(".en-navigation").addClass("reset-en-navigation");
       $(".menu-item-has-children")
         .not(this)
         .parent()
@@ -62,7 +63,8 @@ $(document).ready(function () {
         .parent()
         .removeClass("show-submenu")
         .removeClass("low-zIndex");
-      $(".en-navigation").removeClass("reset-en-navigation");
+       $(".ar-navigation").removeClass("reset-ar-navigation");
+       $(".en-navigation").removeClass("reset-en-navigation");
     });
   } // End of condition
 
