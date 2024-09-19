@@ -103,7 +103,8 @@ img {
   image-rendering: -webkit-optimize-contrast;
 }
 
-ul {
+ul,
+.ul-es {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -255,7 +256,7 @@ button {
     font-size: 20px;
     line-height: normal;
     margin-bottom: 35px;
-    &::after{
+    &::after {
       bottom: -10px;
     }
   }
@@ -277,8 +278,8 @@ button {
     width: 35px;
     height: 35px;
   }
-  
-.totop-whatsapp-holder{
-  z-index: 100;
-}
+
+  .totop-whatsapp-holder {
+    z-index: 100;
+  }
 }

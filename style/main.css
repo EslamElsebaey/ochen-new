@@ -141,7 +141,8 @@ img {
   image-rendering: -webkit-optimize-contrast;
 }
 
-ul {
+ul,
+.ul-es {
   margin: 0;
   padding: 0;
   list-style: none;
