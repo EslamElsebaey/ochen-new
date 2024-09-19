@@ -456,7 +456,7 @@ html:not([dir=rtl]) .arabic {
   right: 0;
 }
 .ar-navigation .menu-item-has-children .sub-menu::after {
-  inset-inline-end: 50px;
+  left: 50px;
 }
 .ar-navigation .big-menu {
   border-top-left-radius: 15px;
@@ -467,7 +467,7 @@ html:not([dir=rtl]) .arabic {
   left: 0;
 }
 .en-navigation .menu-item-has-children .sub-menu::after {
-  inset-inline-start: 50px;
+  right: 50px;
 }
 .en-navigation .big-menu {
   border-top-right-radius: 15px;
@@ -693,6 +693,7 @@ html:not([dir=rtl]) .reset-ar-navigation {
   }
   .menu-item-has-children .sub-menu {
     position: static;
+    transition: unset;
     background-color: transparent;
     opacity: 1;
     visibility: visible;
