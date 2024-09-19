@@ -523,7 +523,7 @@ html:not([dir=rtl]) .reset-ar-navigation {
   font-size: 18px;
 }
 .index-header .logo img {
-  width: 306px;
+  width: 250px;
 }
 
 @media only screen and (min-width: 1400px) {
@@ -544,7 +544,7 @@ html:not([dir=rtl]) .reset-ar-navigation {
 }
 @media only screen and (max-width: 1199px) {
   .index-header .logo img {
-    width: 250px;
+    width: 220px;
   }
 }
 @media only screen and (max-width: 767px) {
@@ -944,6 +944,11 @@ html:not([dir=rtl]) .reset-ar-navigation {
   }
   100% {
     transform: translateY(20px);
+  }
+}
+@media only screen and (max-width: 767px) {
+  .mainBanner {
+    height: 400px;
   }
 }
 .about {

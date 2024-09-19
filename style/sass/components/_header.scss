@@ -225,7 +225,7 @@ html:not([dir="rtl"]) {
     }
   }
   .logo img {
-    width: 306px;
+    width: 250px;
   }
 }
 
@@ -251,7 +251,7 @@ html:not([dir="rtl"]) {
 
 @include max-1200 {
   .index-header .logo img {
-    width: 250px;
+    width: 220px;
   }
 }
 

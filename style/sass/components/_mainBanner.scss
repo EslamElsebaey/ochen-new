@@ -75,3 +75,9 @@
 }
 
 
+@include max-768 {
+  .mainBanner{
+    height: 400px;
+  }
+ 
+}
