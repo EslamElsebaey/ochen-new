@@ -13,26 +13,15 @@ body {
   font-family: "Graphik Arabic";
 }
 
-.general-title {
-  font-size: 36px;
-  line-height: 40px;
-  color: #221355;
-  font-weight: 700;
-  text-align: center;
-  position: relative;
-  text-transform: capitalize;
-  margin-bottom: 55px;
-  &::after {
-    position: absolute;
-    content: "";
-    width: 45px;
-    height: 2px;
-    background-color: #f6c401;
-    bottom: -20px;
-    left: 50%;
-    transform: translateX(-50%);
-  }
+
+.swiper-button-prev:after,
+.swiper-rtl .swiper-button-next:after,
+.swiper-button-next:after,
+.swiper-rtl .swiper-button-prev:after {
+  display: none;
 }
+
+
 
 // fixed whatsapp
 
@@ -115,7 +104,7 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6  , p{
   margin-bottom: 0;
 }
 
@@ -245,21 +234,9 @@ button {
   }
 }
 
-@include max-992 {
-  .general-title {
-    width: 100%;
-  }
-}
-
 @include max-768 {
-  .general-title {
-    font-size: 20px;
-    line-height: 1.7;
-    margin-bottom: 35px;
-    &::after {
-      bottom: -10px;
-    }
-  }
+
+
   .fixed-whatsapp {
     width: 50px;
     height: 50px;
@@ -282,4 +259,5 @@ button {
   .totop-whatsapp-holder {
     z-index: 100;
   }
+  
 }

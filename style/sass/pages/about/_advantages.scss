@@ -1,0 +1,119 @@
+.advantages {
+  padding: 130px 0 120px 0;
+  .general-title {
+    text-align: start;
+    color: #221355;
+    width: auto;
+    margin-bottom: 45px;
+    margin-inline: unset;
+    &::after {
+      display: none;
+    }
+  }
+}
+
+
+.title-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.main-question {
+  position: relative;
+  border-bottom: 1px solid #d9d9d9;
+  padding: 28px 0;
+  cursor: pointer;
+}
+
+.main-question.active {
+  .title-wrapper .icon {
+    transform: rotate(180deg);
+  }
+  .fa-plus:before {
+    content: "\f068";
+  }
+}
+
+.title-text {
+  font-size: 18px;
+  color: #221355;
+  font-weight: 700;
+  text-align: start;
+  transition: all ease-in-out 0.1s;
+  margin: 0;
+  cursor: pointer;
+}
+
+.title-wrapper {
+  .icon {
+    font-size: 20px;
+    margin-inline-start: auto;
+    color: #221355;
+    transition: all linear 0.2s;
+  }
+}
+.question-answer {
+  font-size: 18px;
+  line-height: 28px;
+  color: #221355;
+  line-height: 28px;
+  text-align: start;
+  padding-inline-end: 60px;
+  margin-top: 10px;
+  display: none;
+  font-weight: 400;
+}
+
+
+.questions-parent {
+  width: 555px;
+}
+
+@include max-992 {
+ 
+  .title-text {
+    font-size: 16px;
+  }
+  .advantages-content {
+    width: 100%;
+  }
+
+  .advantages .main-title {
+    text-align: center;
+  }
+  .questions-parent {
+    width: 100%;
+  }
+}
+
+@include max-768 {
+  .advantages .general-title {
+    margin-bottom: 15px;
+  }
+  .main-question {
+    padding: 20px 0;
+  }
+  .title-text {
+    line-height: 1.6;
+  }
+
+  .advantages .main-title {
+    margin-bottom: 20px;
+  }
+ 
+  .advantages {
+    padding: 50px 0;
+  }
+  .question-answer {
+    font-size: 15px;
+    line-height: 1.8;
+  }
+  .question-answer {
+    padding-inline-end: 40px;
+  }
+  html:not([dir="rtl"]) {
+    .question-answer {
+      line-height: 1.6;
+    }
+  }
+}

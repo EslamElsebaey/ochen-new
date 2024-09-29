@@ -1,19 +1,10 @@
 
-@import"../style/sass/base/fonts";
-@import "../style/sass/abstracts/mixins";
-@import "../style/sass/base/base";
+@import "../style/sass/mixins/mixins";
+@import"../style/sass/base/index";
+@import "../style/sass/pages/index";
+@import "../style/sass/components/index";
 
 
-
-
-@import "../style/sass/components/header";
-@import "../style/sass/components/index-page";
-@import "../style/sass/components/language";
-@import "../style/sass/components/mainBanner";
-@import "../style/sass/components/about";
-@import "../style/sass/components/services";
-@import "../style/sass/components/licences";
-@import "../style/sass/components/footer";
 
 
 

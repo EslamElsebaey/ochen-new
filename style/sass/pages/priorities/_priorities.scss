@@ -1,0 +1,122 @@
+
+
+.priorities-content {
+  .general-title {
+    text-align: start;
+    font-size: 24px;
+    margin-bottom: 45px;
+    margin-top: 25px;
+    &::after {
+      bottom: -10px;
+      left: unset;
+      transform: unset;
+      inset-inline-start: 0;
+    }
+  }
+}
+.priorities-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 130px;
+  row-gap: 10px;
+}
+.priorities-item {
+  display: flex;
+  align-items: center;
+  column-gap: 17px;
+  .icon-circle {
+    width: 50px;
+    flex-shrink: 0;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #f6c401;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    i {
+      font-size: 24px;
+      color: #221355;
+    }
+  }
+  .text {
+    font-size: 18px;
+    color: #221355;
+    margin-bottom: 0;
+  }
+}
+
+
+html:not([dir="rtl"]) {
+  .priorities-wrapper {
+    column-gap: 20px;
+  }
+  @include max-1200 {
+   
+  
+    .priorities-item .text {
+      line-height: 1.4;
+    }
+  }
+}
+
+@include max-1200 {
+ 
+  .priorities-wrapper {
+    column-gap: 60px;
+  }
+}
+
+
+@include max-768 {
+
+  .priorities-content {
+    width: 100%;
+  }
+  .priorities-wrapper {
+    column-gap: 0;
+    row-gap: 15px;
+    // grid-template-columns: 1fr;
+  }
+  .priorities-item{
+    column-gap: 7px;
+  }
+  .priorities-item .icon-circle{
+    width: 40px;
+    height: 40px;
+    i{
+      font-size: 20px;
+    }
+  }
+  .priorities-item .text{
+    font-size: 16px;
+    // white-space: nowrap;
+  }
+ 
+  // .priorities-item .text{
+  //     // white-space: nowrap;
+  //     font-size: 16px;
+  // }
+  .priorities-content .general-title {
+    margin-top: 0;
+    // text-align: center;
+    margin-bottom: 35px;
+    font-size: 20px;
+    // &::after{
+    //     bottom: -10px;
+    //     left: 50%;
+    //     transform: translateX(-50%);
+    //     inset-inline-start : unset ;
+    // }
+  }
+
+  //   .priorities-item .icon-circle{
+  //     width: 45px;
+  //     height: 45px;
+  //     i{
+  //         font-size: 20px;
+  //     }
+  //   }
+  //   .priorities-item{
+  //     column-gap: 10px;
+  //   }
+}

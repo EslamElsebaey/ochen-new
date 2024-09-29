@@ -1,0 +1,232 @@
+.products {
+  padding-top: 60px;
+  padding-bottom: 115px;
+  // background-color: ;
+  .item {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  clip-path: polygon(50% 50%, 100% 0, 100% 50%, 50% 50%);
+  transform-origin: 50% 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  .text {
+    top: 31%;
+    right: 7%;
+    font-size: 30px;
+    position: absolute;
+    font-weight: 700;
+    display: block;
+    font-weight: 700;
+    text-align: center;
+    color: #fff;
+    max-width: 172px;
+  }
+}
+.item:nth-of-type(even) {
+  background-color: #f6c401;
+}
+.item:nth-of-type(odd) {
+  background-color: #221355;
+}
+.item-1 {
+  transform: rotate(45deg);
+  .text {
+    top: 34%;
+    right: 7%;
+    transform: rotate(-45deg);
+    max-width: 200px;
+  }
+}
+.item-2 {
+  transform: rotate(90deg);
+  .text {
+    transform: rotate(-90deg);
+  }
+}
+
+.item-3 {
+  transform: rotate(135deg);
+  .text {
+    transform: rotate(-135deg);
+  }
+}
+
+.item-4 {
+  transform: rotate(180deg);
+  .text {
+    transform: rotate(-180deg);
+  }
+}
+.item-5 {
+  transform: rotate(225deg);
+
+  .text {
+    transform: rotate(-225deg);
+  }
+}
+.item-6 {
+  transform: rotate(270deg);
+  .text {
+    transform: rotate(-270deg);
+  }
+}
+.item-7 {
+  transform: rotate(315deg);
+  .text {
+    transform: rotate(-315deg);
+  }
+}
+.item-8 {
+  transform: rotate(360deg);
+  .text {
+    transform: rotate(-360deg);
+    top: 28%;
+  }
+}
+
+.circle-wrapper {
+  overflow: hidden;
+  position: relative;
+  margin-inline: auto;
+  width: 750px;
+  height: 750px;
+  background-color: #d8d8d8;
+  border-radius: 50%;
+  .overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 219px;
+    height: 219px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img {
+      width: 183px;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 272px;
+      height: 272px;
+      border-radius: 50%;
+      z-index: -1;
+      background-color: rgba(255, 255, 255, 0.14901960784313725);
+      border: 1px solid rgba(255, 255, 255, 0.4);
+    }
+    .logo {
+      width: 183px;
+    }
+  }
+}
+
+}
+
+
+
+
+html:not([dir="rtl"]) {
+  .products .item .text {
+    line-height: 1.25;
+  }
+ .products .item-8 .text {
+    top: 32%;
+  }
+ .products .item-6 .text {
+    top: 29%;
+  }
+ .products .item-1 .text {
+    top: 30%;
+    right: 6%;
+  }
+ .products .item-2 .text {
+    top: 33%;
+  }
+.products  .item-3 .text {
+    top: 32%;
+    right: 5%;
+  }
+}
+
+@include max-992 {
+  .products .circle-wrapper {
+    width: 600px;
+    height: 600px;
+  }
+ .products  .item .text {
+    font-size: 20px;
+  }
+ .products .item-8 .text {
+    top: 30%;
+    right: 3%;
+  }
+ .products .item-3 .text {
+    top: 35%;
+  }
+ .products .item-7 .text {
+    top: 36%;
+  }
+}
+
+@include max-768 {
+.products  .circle-wrapper {
+    width: 350px;
+    height: 350px;
+  }
+ .products .circle-wrapper .overlay {
+    width: 110px;
+    height: 110px;
+  }
+ .products .circle-wrapper .overlay img {
+    width: 80px;
+  }
+ .products .circle-wrapper .overlay::after {
+    width: 140px;
+    height: 140px;
+  }
+ .products .item .text {
+    top: 29%;
+    font-size: 16px;
+    max-width: 90px;
+  }
+  .products .item-8 .text {
+    top: 25%;
+  }
+  .products .item-4 .text {
+    top: 31%;
+  }
+ .products .item-4 .text,
+ .products .item-3 .text {
+    right: 4%;
+  }
+  .products {
+    padding: 60px 0;
+    .container {
+      padding: 0;
+    }
+  }
+
+  html:not([dir="rtl"]) {
+   .products .item-7 .text {
+      right: 4%;
+      top: 31%;
+    }
+    .products .item .text{
+      font-size: 15px;
+      max-width: 85px;
+    }
+   .products  .item-8 .text{
+      right: 5%;
+    }
+  }
+}

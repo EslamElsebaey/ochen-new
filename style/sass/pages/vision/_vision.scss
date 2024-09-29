@@ -1,0 +1,52 @@
+.vision {
+}
+
+.title-text-wrapper {
+  .general-title {
+    font-size: 24px;
+    line-height: 30px;
+    margin-bottom: 40px;
+    text-align: start;
+    &::after {
+      left: unset;
+      inset-inline-start: 0;
+      transform: unset;
+      bottom: -15px;
+    }
+  }
+  .text {
+    width: 583px;
+    font-size: 18px;
+    line-height: 30px;
+    color: #221355;
+    text-transform: capitalize
+  }
+}
+.title-text-wrapper:first-of-type {
+  margin-bottom: 35px;
+}
+
+@include max-1200 {
+  .title-text-wrapper .text {
+    width: 100%;
+  }
+}
+
+@include max-768 {
+  .title-text-wrapper {
+    .general-title {
+      margin-bottom: 35px;
+      text-align: center;
+      font-size: 20px;
+      &::after {
+        inset-inline-start: unset;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+    .text {
+      text-align: center;
+      font-size: 16px;
+    }
+  }
+}

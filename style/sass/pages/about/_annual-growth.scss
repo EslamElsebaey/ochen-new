@@ -1,0 +1,110 @@
+.annual-growth {
+  background-image: url("../images/services-banner.jpg");
+  background-position: center;
+  background-size: cover;
+  padding-top: 100px;
+  padding-bottom: 120px;
+  .general-title {
+    color: #fff;
+    margin-bottom: 40px;
+    &::after {
+      display: none;
+    }
+  }
+  .swiper-pagination {
+    display: none;
+  }
+  .swiper-button-prev,
+  .swiper-button-next {
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0;
+  }
+  .swiper-button-prev,
+  .swiper-rtl .swiper-button-next,
+  .swiper-button-next,
+  .swiper-rtl .swiper-button-prev {
+    &:hover {
+      i {
+        color: #f6c401;
+      }
+    }
+    i {
+      transition: color linear 0.2s;
+      font-size: 24px;
+      color: #433376;
+    }
+  }
+  .swiper-button-prev,
+  .swiper-rtl .swiper-button-next {
+    left: unset;
+    right: -50px;
+  }
+  .swiper-button-next,
+  .swiper-rtl .swiper-button-prev {
+    right: unset;
+    left: -50px;
+  }
+}
+.growth-item {
+  max-width: 165px;
+  height: 176px;
+  border-radius: 20px;
+  background-color: #221355;
+  border: 2px solid #392b66;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  row-gap: 27px;
+  .num {
+    font-size: 48px;
+    line-height: 36px;
+    color: #f6c401;
+    font-weight: 700;
+    text-align: center;
+  }
+  .text {
+    font-size: 18px;
+    line-height: 36px;
+    color: #ffffff;
+    margin: 0;
+
+    text-align: center;
+  }
+}
+
+@include max-992 {
+  .growth-item {
+    margin-inline: auto;
+  }
+  .annual-growth .swiper-button-prev,
+  .annual-growth .swiper-button-next {
+    display: none;
+  }
+}
+
+@include max-768 {
+  .growth-item .num {
+    font-size: 30px;
+    line-height: normal;
+  }
+  .growth-item {
+    height: 140px;
+    row-gap: 10px;
+  }
+  .growth-item .text {
+    font-size: 16px;
+  }
+  .annual-growth {
+    padding-top: 50px;
+    padding-bottom: 90px;
+    .swiper-pagination{
+      display: flex;
+      bottom: -40px;
+    }
+  }
+  .annual-growth .general-title{
+    margin-bottom: 25px;
+  }
+}

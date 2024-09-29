@@ -1,19 +1,28 @@
-
-// On window load 
+// On window load
 $(window).on("load", function () {
   $(".preloader").fadeOut();
 });
 
-  //********************************************************************************************
+//********************************************************************************************
 
 $(document).ready(function () {
+  // Advantages
+
+  $(".main-question").on("click", function () {
+    $(this).children(".question-answer").slideToggle(300);
+    $(this).toggleClass("active").siblings().removeClass("active");
+    $(".question-answer")
+      .not($(this).children(".question-answer"))
+      .slideUp(300);
+  });
+
   // Services Swiper
 
   const servicesSwiper = new Swiper(".services .swiper", {
     loop: true,
     draggable: true,
     autoplay: true,
-    speed: 1000,
+    speed: 800,
     pagination: {
       el: ".services .swiper-pagination",
       clickable: true,
@@ -38,6 +47,40 @@ $(document).ready(function () {
     },
   });
 
+  // Annual Growth
+  const annualGrowthSwiper = new Swiper(".annual-growth .swiper", {
+    loop: true,
+    draggable: true,
+    // autoplay: true,
+    speed: 800,
+    pagination: {
+      el: ".annual-growth .swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".annual-growth .swiper-button-next",
+      prevEl: ".annual-growth .swiper-button-prev",
+    },
+    breakpoints: {
+      375: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+      768: {
+        slidesPerView: 3,
+        spaceBetween: 30,
+      },
+      992: {
+        slidesPerView: 5,
+        spaceBetween: 30,
+      },
+      1200: {
+        slidesPerView: 6,
+        spaceBetween: 30,
+      },
+    },
+  });
+
   //********************************************************************************************
 
   if ($(window).width() > 768) {
@@ -46,8 +89,8 @@ $(document).ready(function () {
       $(".totop-whatsapp-holder").hide();
       $("body").addClass("overflow-hidden");
       $(this).parent().parent().addClass("show-submenu");
-          $(".ar-navigation").addClass("reset-ar-navigation");
-          $(".en-navigation").addClass("reset-en-navigation");
+      $(".ar-navigation").addClass("reset-ar-navigation");
+      $(".en-navigation").addClass("reset-en-navigation");
       $(".menu-item-has-children")
         .not(this)
         .parent()
@@ -63,8 +106,8 @@ $(document).ready(function () {
         .parent()
         .removeClass("show-submenu")
         .removeClass("low-zIndex");
-       $(".ar-navigation").removeClass("reset-ar-navigation");
-       $(".en-navigation").removeClass("reset-en-navigation");
+      $(".ar-navigation").removeClass("reset-ar-navigation");
+      $(".en-navigation").removeClass("reset-en-navigation");
     });
   } // End of condition
 

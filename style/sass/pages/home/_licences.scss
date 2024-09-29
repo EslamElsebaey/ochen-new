@@ -1,0 +1,125 @@
+.licences {
+  padding-top: 115px;
+  padding-bottom: 135px;
+  .general-title {
+    margin-bottom: 70px;
+    &::after {
+      display: none;
+    }
+  }
+}
+
+.licences-page-section {
+  padding-top: 100px;
+  padding-bottom: 170px;
+}
+
+.licences-page-section,
+.licences {
+  .img-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    img {
+      max-width: 100%;
+    }
+  }
+}
+.licences {
+  .swiper-pagination {
+    display: none;
+  }
+}
+.licences-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 50px;
+  flex-wrap: wrap;
+  row-gap: 30px;
+  .img-wrapper {
+    width: calc((100% / 5) - (200px / 5));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@include min-768 {
+  .licences {
+    .swiper-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      .swiper-slide {
+        width: auto;
+      }
+    }
+  }
+}
+
+@include max-1200 {
+  .licences-wrapper {
+    justify-content: center;
+  }
+}
+
+@include max-992 {
+  .licences .swiper-wrapper {
+    column-gap: 50px;
+    row-gap: 40px;
+    justify-content: center;
+  }
+  .licences-wrapper .img-wrapper{
+    width: calc((100% / 4) - (150px / 4));
+  }
+    .licences-wrapper{
+    gap: 50px;
+  }
+}
+
+@include max-768 {
+  .licences .general-title {
+    margin-bottom: 40px;
+  }
+  html:not([dir="rtl"]) {
+    .licences .general-title {
+      line-height: 1.5;
+    }
+  }
+  .licences {
+    padding-top: 60px;
+    padding-bottom: 90px;
+  }
+  .licences-page-section {
+    padding: 60px 0;
+  }
+  .licences {
+    .swiper-wrapper {
+      align-items: center;
+      gap: 0;
+      justify-content: unset;
+    }
+    .swiper-pagination {
+      display: flex;
+      bottom: -40px;
+    }
+    .swiper-pagination-bullet {
+      opacity: 0.302;
+      background-color: #000;
+    }
+    .swiper-pagination-bullet-active {
+      opacity: 1;
+      background-color: $yellow-color;
+    }
+  }
+  .licences-wrapper {
+    column-gap: 30px;
+    row-gap: 35px;
+    // justify-content: space-between;
+  }
+  .licences-wrapper .img-wrapper {
+    width: calc(50% - 15px);
+  }
+}
