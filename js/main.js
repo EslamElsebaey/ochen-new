@@ -51,7 +51,7 @@ $(document).ready(function () {
   const annualGrowthSwiper = new Swiper(".annual-growth .swiper", {
     loop: true,
     draggable: true,
-    // autoplay: true,
+    autoplay: true,
     speed: 800,
     pagination: {
       el: ".annual-growth .swiper-pagination",
