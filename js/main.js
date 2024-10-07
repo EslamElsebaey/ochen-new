@@ -86,18 +86,20 @@ $(document).ready(function () {
   if ($(window).width() > 768) {
     // Fixed nav in Desktop
     $(".menu-item-has-children").on("click", function () {
-      $(".totop-whatsapp-holder").hide();
       $("body").addClass("overflow-hidden");
       $(this).parent().parent().addClass("reset-other-nav");
       $(this).children(".sub-menu").addClass("show-me");
-      $(".navigation:not(.reset-other-nav)").addClass("low-zindex");
+      $(".navigation:not(.reset-other-nav) , .totop-whatsapp-holder").addClass(
+        "low-zindex"
+      );
     });
     $(".sub-menu").on("click", function (e) {
-      $(".totop-whatsapp-holder").show();
       $(this).removeClass("show-me");
       $("body").removeClass("overflow-hidden");
       e.stopPropagation();
-      $(".navigation:not(.reset-other-nav)").removeClass("low-zindex");
+        $(
+          ".navigation:not(.reset-other-nav) , .totop-whatsapp-holder"
+        ).addClass("low-zindex");
       $(".menu-item-has-children")
         .parent()
         .parent()
