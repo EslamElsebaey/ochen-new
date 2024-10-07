@@ -93,16 +93,13 @@ $(document).ready(function () {
       );
     });
     $(".sub-menu").on("click", function (e) {
-      $(this).removeClass("show-me");
-      $("body").removeClass("overflow-hidden");
       e.stopPropagation();
-      $(".navigation:not(.reset-other-nav) , .totop-whatsapp-holder").addClass(
+      $("body").removeClass("overflow-hidden");
+      $(this).removeClass("show-me");
+      $(".navigation:not(.reset-other-nav) , .totop-whatsapp-holder").removeClass(
         "low-zindex"
       );
-      $(".menu-item-has-children")
-        .parent()
-        .parent()
-        .removeClass("reset-other-nav");
+      $(this).parent().parent().parent().removeClass("reset-other-nav");
     });
   }
 
