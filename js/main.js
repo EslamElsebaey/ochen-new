@@ -82,9 +82,8 @@ $(document).ready(function () {
   });
 
   //********************************************************************************************
-
+  // Fixed nav in Desktop
   if ($(window).width() > 768) {
-    // Fixed nav in Desktop
     $(".menu-item-has-children").on("click", function () {
       $("body").addClass("overflow-hidden");
       $(this).parent().parent().addClass("reset-other-nav");
@@ -97,15 +96,15 @@ $(document).ready(function () {
       $(this).removeClass("show-me");
       $("body").removeClass("overflow-hidden");
       e.stopPropagation();
-        $(
-          ".navigation:not(.reset-other-nav) , .totop-whatsapp-holder"
-        ).addClass("low-zindex");
+      $(".navigation:not(.reset-other-nav) , .totop-whatsapp-holder").addClass(
+        "low-zindex"
+      );
       $(".menu-item-has-children")
         .parent()
         .parent()
         .removeClass("reset-other-nav");
     });
-  } // End of condition
+  }
 
   //********************************************************************************************
 
