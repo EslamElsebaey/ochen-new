@@ -1887,39 +1887,29 @@ html:not([dir=rtl]) .arabic {
   border-bottom-right-radius: 15px;
 }
 
-.show-submenu .menu-item-has-children .sub-menu {
+.reset-other-nav.en-navigation {
+  width: 100%;
+  justify-content: flex-end;
+}
+
+html:not([dir=rtl]) .reset-other-nav.en-navigation {
+  justify-content: flex-start;
+}
+html:not([dir=rtl]) .reset-other-nav.ar-navigation {
+  width: 100%;
+  justify-content: flex-end;
+}
+
+.low-zindex {
+  z-index: 2 !important;
+}
+
+.menu-item-has-children .show-me {
   opacity: 1;
   visibility: visible;
 }
-.show-submenu .menu-item-has-children .sub-menu::after {
+.menu-item-has-children .show-me::after {
   display: block;
-}
-
-.reset-en-navigation {
-  width: 100%;
-  display: flex;
-  justify-content: flex-end;
-}
-
-.reset-ar-navigation {
-  width: 100%;
-  display: flex;
-  justify-content: flex-start;
-}
-
-html:not([dir=rtl]) .reset-en-navigation {
-  justify-content: flex-start;
-}
-html:not([dir=rtl]) .reset-ar-navigation {
-  justify-content: flex-end;
-}
-
-.reset-ar-navigation {
-  width: 100%;
-}
-
-.low-zIndex {
-  z-index: 5;
 }
 
 .index-logo {

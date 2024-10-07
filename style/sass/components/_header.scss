@@ -173,42 +173,40 @@ html:not([dir="rtl"]) {
   }
 }
 
-.show-submenu {
-  .menu-item-has-children .sub-menu {
-    opacity: 1;
-    visibility: visible;
-    &::after {
-      display: block;
-    }
-  }
-}
+// SUB MENU /******************************************************************************/
 
-.reset-en-navigation {
-  width: 100%;
-  display: flex;
-  justify-content: flex-end;
-}
-.reset-ar-navigation {
-  width: 100%;
-  display: flex;
-  justify-content: flex-start;
-}
-
-html:not([dir="rtl"]) {
-  .reset-en-navigation {
-    justify-content: flex-start;
-  }
-  .reset-ar-navigation {
+.reset-other-nav {
+  &.en-navigation {
+    width: 100%;
     justify-content: flex-end;
   }
 }
+html:not([dir="rtl"]) {
+  .reset-other-nav {
+    &.en-navigation {
+      justify-content: flex-start;
+    }
+  }
+  .reset-other-nav {
+    &.ar-navigation {
+      width: 100%;
+      justify-content: flex-end;
+    }
+  }
+}
+.low-zindex {
+  z-index: 2 !important;
+}
 
-.reset-ar-navigation {
-  width: 100%;
+.menu-item-has-children .show-me {
+  opacity: 1;
+  visibility: visible;
+  &::after {
+    display: block;
+  }
 }
-.low-zIndex {
-  z-index: 5;
-}
+
+// SUB MENU /******************************************************************************/
 
 .index-logo {
   top: 10px;

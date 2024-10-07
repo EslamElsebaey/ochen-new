@@ -88,26 +88,20 @@ $(document).ready(function () {
     $(".menu-item-has-children").on("click", function () {
       $(".totop-whatsapp-holder").hide();
       $("body").addClass("overflow-hidden");
-      $(this).parent().parent().addClass("show-submenu");
-      $(".ar-navigation").addClass("reset-ar-navigation");
-      $(".en-navigation").addClass("reset-en-navigation");
-      $(".menu-item-has-children")
-        .not(this)
-        .parent()
-        .parent()
-        .addClass("low-zIndex");
+      $(this).parent().parent().addClass("reset-other-nav");
+      $(this).children(".sub-menu").addClass("show-me");
+      $(".navigation:not(.reset-other-nav)").addClass("low-zindex");
     });
     $(".sub-menu").on("click", function (e) {
       $(".totop-whatsapp-holder").show();
+      $(this).removeClass("show-me");
       $("body").removeClass("overflow-hidden");
       e.stopPropagation();
+      $(".navigation:not(.reset-other-nav)").removeClass("low-zindex");
       $(".menu-item-has-children")
         .parent()
         .parent()
-        .removeClass("show-submenu")
-        .removeClass("low-zIndex");
-      $(".ar-navigation").removeClass("reset-ar-navigation");
-      $(".en-navigation").removeClass("reset-en-navigation");
+        .removeClass("reset-other-nav");
     });
   } // End of condition
 
